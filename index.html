@@ -14,13 +14,10 @@
         .text-filinvest-green { color: var(--filinvest-green); }
         .bg-filinvest-green { background-color: var(--filinvest-green); }
         .text-filinvest-gold { color: var(--filinvest-gold); }
-        .border-filinvest-gold { border-color: var(--filinvest-gold); }
+        .fb-float:hover { transform: scale(1.1); background-color: #365899; }
         
-        /* Floating FB Button Hover */
-        .fb-float:hover {
-            transform: scale(1.1);
-            background-color: #365899;
-        }
+        /* Ensure the search bar area has enough height when items appear */
+        #search-form-container { min-height: 100px; }
     </style>
 </head>
 <body class="bg-[#fdfbf7] text-[#333] font-sans">
@@ -36,7 +33,6 @@
             <div class="text-2xl font-bold text-filinvest-green uppercase tracking-tighter">
                 FILINVEST <span class="text-filinvest-gold">SOUTH</span>
             </div>
-            
             <a href="tel:+639212544429" class="bg-filinvest-green text-white px-5 py-2 rounded shadow-md hover:bg-opacity-90 transition flex items-center gap-2">
                 <i class="fa-solid fa-phone-flip text-sm"></i>
                 <span class="font-bold text-sm md:text-base">+63 921 254 4429</span>
@@ -44,9 +40,9 @@
         </div>
     </nav>
 
-    <section class="relative min-h-[650px] flex items-center justify-center overflow-hidden py-20">
+    <section class="relative min-h-[700px] flex items-center justify-center overflow-hidden py-20">
         <div class="absolute inset-0 z-0">
-            <img src="https://lh3.googleusercontent.com/u/0/d/1hAyYQAhAuWwlTeDhTA2vumqp6G-xpkrl=w1920-h1080-iv1" 
+            <img src="https://drive.google.com/uc?export=view&id=1hAyYQAhAuWwlTeDhTA2vumqp6G-xpkrl" 
                  class="w-full h-full object-cover" 
                  alt="Filinvest South Background">
             <div class="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -54,29 +50,125 @@
 
         <div class="container mx-auto px-6 relative z-10 text-center text-white">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg leading-tight">Build Your Future in the South</h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-md text-gray-100">
-                Premium properties in Batangas, Laguna, and Cavite managed by Park Real Estate Services.
-            </p>
+            <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-100">Premium properties in Batangas, Laguna, and Cavite managed by Park Real Estate Services.</p>
 
-            <div class="bg-white p-4 rounded-lg shadow-2xl flex flex-col md:flex-row gap-4 max-w-6xl mx-auto border-b-4 border-filinvest-gold">
-                
-                <div class="flex-1 text-left px-2">
-                    <label class="block text-filinvest-green text-xs font-bold uppercase mb-2">Select Province</label>
-                    <select id="location-select" onchange="updateSubLocation()" class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent font-semibold cursor-pointer">
-                        <option value="">Select Location</option>
-                        <option value="batangas">Batangas</option>
-                        <option value="laguna">Laguna</option>
-                        <option value="cavite">Cavite</option>
-                    </select>
-                </div>
-
-                <div id="sub-location-container" class="hidden flex-1 text-left px-2 border-l border-gray-100">
-                    <label id="sub-location-label" class="block text-filinvest-green text-xs font-bold uppercase mb-2">Select City/Town</label>
-                    <select id="sub-location-select" class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent font-semibold cursor-pointer">
+            <div class="bg-white p-6 rounded-xl shadow-2xl max-w-6xl mx-auto border-b-8 border-filinvest-gold text-gray-800">
+                <div id="search-form-container" class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+                    
+                    <div class="text-left">
+                        <label class="block text-filinvest-green text-xs font-bold uppercase mb-2">Select Province</label>
+                        <select id="location-select" onchange="updateSubLocation()" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-filinvest-gold outline-none font-semibold cursor-pointer">
+                            <option value="">Choose Province</option>
+                            <option value="batangas">Batangas</option>
+                            <option value="laguna">Laguna</option>
+                            <option value="cavite">Cavite</option>
                         </select>
-                </div>
+                    </div>
 
-                <div class="flex-1 text-left px-2 border-l border-gray-100">
-                    <label class="block text-filinvest-green text-xs font-bold uppercase mb-2">Property Type</label>
-                    <select id="property-type-select" class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent font-semibold cursor-pointer">
-                        <option value
+                    <div id="sub-location-container" class="text-left opacity-30 pointer-events-none transition-all duration-300">
+                        <label id="sub-location-label" class="block text-filinvest-green text-xs font-bold uppercase mb-2">City/Town</label>
+                        <select id="sub-location-select" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-filinvest-gold outline-none font-semibold cursor-pointer">
+                            <option value="">Select Province First</option>
+                        </select>
+                    </div>
+
+                    <div class="text-left">
+                        <label class="block text-filinvest-green text-xs font-bold uppercase mb-2">Property Type</label>
+                        <select id="property-type-select" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-filinvest-gold outline-none font-semibold cursor-pointer">
+                            <option value="">Select Type</option>
+                            <option value="house-lot">House and Lot</option>
+                            <option value="lot-only">Lot Only</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button onclick="handleSearch()" class="w-full bg-filinvest-green text-white font-bold py-4 px-6 rounded-lg hover:bg-opacity-90 transition uppercase tracking-widest shadow-lg">
+                            Find Home
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 text-gray-700 py-16 border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm uppercase tracking-[0.2em] text-gray-400 font-bold mb-2">Managed By</p>
+            <h3 class="text-2xl font-light text-filinvest-green mb-8 tracking-wide">Park Real Estate Services</h3>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">
+                <a href="tel:+639212544429" class="flex items-center gap-3 text-xl font-semibold hover:text-filinvest-gold">
+                    <i class="fa-solid fa-phone text-filinvest-gold"></i> +63 921 254 4429
+                </a>
+                <span class="hidden md:block text-gray-300">|</span>
+                <a href="https://www.facebook.com/profile.php?id=61556346275854" target="_blank" class="flex items-center gap-3 text-xl font-semibold hover:text-[#1877F2]">
+                    <i class="fa-brands fa-facebook text-[#1877F2]"></i> Facebook
+                </a>
+            </div>
+
+            <div class="w-24 h-px bg-filinvest-gold mx-auto mb-10"></div>
+            <p class="text-xs text-gray-400 uppercase tracking-widest">© 2026 Park Real Estate Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function updateSubLocation() {
+            const province = document.getElementById('location-select').value;
+            const subContainer = document.getElementById('sub-location-container');
+            const subSelect = document.getElementById('sub-location-select');
+            const subLabel = document.getElementById('sub-location-label');
+            
+            subSelect.innerHTML = '';
+            let options = [];
+
+            if (province === 'laguna') {
+                subLabel.innerText = "City in Laguna";
+                options = [{v: 'calamba', t: 'Calamba'}, {v: 'san-pedro', t: 'San Pedro'}];
+            } else if (province === 'cavite') {
+                subLabel.innerText = "City in Cavite";
+                options = [{v: 'tanza', t: 'Tanza'}, {v: 'trece-martires', t: 'Trece Martires'}];
+            } else if (province === 'batangas') {
+                subLabel.innerText = "City in Batangas";
+                options = [{v: 'tanauan', t: 'Tanauan'}, {v: 'lipa', t: 'Lipa'}];
+            }
+
+            if (options.length > 0) {
+                // Enable the sub-location dropdown
+                subContainer.style.opacity = "1";
+                subContainer.style.pointerEvents = "auto";
+                
+                let defaultOpt = document.createElement('option');
+                defaultOpt.value = ""; defaultOpt.text = "Choose City/Town";
+                subSelect.appendChild(defaultOpt);
+
+                options.forEach(opt => {
+                    let el = document.createElement('option');
+                    el.value = opt.v; el.text = opt.t;
+                    subSelect.appendChild(el);
+                });
+            } else {
+                // Keep it disabled if no province is picked
+                subContainer.style.opacity = "0.3";
+                subContainer.style.pointerEvents = "none";
+                subSelect.innerHTML = '<option value="">Select Province First</option>';
+            }
+        }
+
+        function handleSearch() {
+            const city = document.getElementById('sub-location-select').value;
+            const province = document.getElementById('location-select').value;
+
+            if (province === 'laguna' && city === 'san-pedro') {
+                window.open('https://github.com/parkres/Southwind', '_blank');
+            } else if (province === '') {
+                alert('Please select a province first.');
+            } else if (city === '') {
+                alert('Please select a city.');
+            } else {
+                alert('Searching properties in ' + city + '... Result page coming soon!');
+            }
+        }
+    </script>
+</body>
+</html>

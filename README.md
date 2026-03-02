@@ -1,23 +1,28 @@
 # Filinvest South Landing Page
 
-A modern, responsive landing page for **Filinvest Land** projects in the South (Batangas, Laguna, and Cavite). This project is designed to capture leads and allow users to filter properties based on location and type.
+A professional, high-conversion landing page for Filinvest projects in the South, managed by **Park Real Estate Services**.
 
 ## 🚀 Live Demo
-[Check out the live site here](https://https://parkres.github.io/FilinvestSouth/) 
-*(Note: Replace with your actual GitHub Pages link after deploying)*
+[https://parkres.github.io/FilinvestSouth/](https://parkres.github.io/FilinvestSouth/)
 
-## ✨ Features
-* **Property Filter:** Dropdown menus for Location (Batangas, Laguna, Cavite) and Property Type (Commercial, House & Lot, Lot Only).
-* **Fully Responsive:** Built with **Tailwind CSS**, ensuring it looks great on mobile, tablet, and desktop.
-* **High Performance:** Uses CDN-based assets for fast loading without the need for complex build tools.
-* **Modern UI:** Clean, professional aesthetic following Filinvest’s corporate branding.
+## ✨ Key Features
+* **Dynamic Sub-Location Filters:** * Selecting **Laguna** reveals options for Calamba and San Pedro.
+  * Selecting **Cavite** reveals options for Tanza and Trece Martires.
+* **Property Type Filter:** Easily switch between House & Lot and Lot Only.
+* **One-Touch Contact:** Integrated click-to-call button and direct Facebook messaging.
+* **Premium Design:** Clean, "Earth-tone" aesthetic with a light-themed professional footer.
+* **Floating Social Action:** Fixed Facebook button for instant inquiries.
 
 ## 🛠️ Tech Stack
-* **HTML5**
-* **Tailwind CSS** (via CDN)
-* **Font Awesome** (for iconography)
+* **HTML5 / CSS3**
+* **Tailwind CSS** (for responsive styling)
+* **JavaScript** (for dynamic dropdown logic)
+* **Font Awesome** (for high-quality icons)
 
-## 📁 Project Structure
-```text
-├── index.html     # Main landing page code
-└── README.md      # Project documentation
+## 👤 Contact & Management
+This website is officially managed by **Park Real Estate Services**.
+* **Contact Number:** +63 921 254 4429
+* **Facebook:** [Park Real Estate Services](https://www.facebook.com/profile.php?id=61556346275854)
+
+---
+© 2026 Park Real Estate Services

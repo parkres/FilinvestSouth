@@ -3,7 +3,7 @@
 A modern, responsive landing page for **Filinvest Land** projects in the South (Batangas, Laguna, and Cavite). This project is designed to capture leads and allow users to filter properties based on location and type.
 
 ## 🚀 Live Demo
-[Check out the live site here](https://your-username.github.io/your-repo-name/) 
+[Check out the live site here](https://https://parkres.github.io/FilinvestSouth/) 
 *(Note: Replace with your actual GitHub Pages link after deploying)*
 
 ## ✨ Features

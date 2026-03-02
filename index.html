@@ -106,34 +106,61 @@
     </footer>
 
     <script>
+        <script>
+        // 1. Function to update the sub-location dropdown
         function updateSubLocation() {
             const mainLocation = document.getElementById('location-select').value;
             const subContainer = document.getElementById('sub-location-container');
             const subSelect = document.getElementById('sub-location-select');
             const subLabel = document.getElementById('sub-location-label');
+            
             subSelect.innerHTML = '';
             let options = [];
 
             if (mainLocation === 'laguna') {
                 subLabel.innerText = "City in Laguna";
-                options = [{ value: 'calamba', text: 'Calamba' }, { value: 'san-pedro', text: 'San Pedro' }];
+                options = [
+                    { value: 'calamba', text: 'Calamba' },
+                    { value: 'san-pedro', text: 'San Pedro' }
+                ];
             } else if (mainLocation === 'cavite') {
                 subLabel.innerText = "City in Cavite";
-                options = [{ value: 'tanza', text: 'Tanza' }, { value: 'trece-martires', text: 'Trece Martires' }];
+                options = [
+                    { value: 'tanza', text: 'Tanza' },
+                    { value: 'trece-martires', text: 'Trece Martires' }
+                ];
             }
 
             if (options.length > 0) {
                 subContainer.classList.remove('hidden');
                 let defaultOpt = document.createElement('option');
-                defaultOpt.value = ""; defaultOpt.text = "Choose City/Town";
+                defaultOpt.value = ""; 
+                defaultOpt.text = "Choose City/Town";
                 subSelect.appendChild(defaultOpt);
+
                 options.forEach(opt => {
                     let el = document.createElement('option');
-                    el.value = opt.value; el.text = opt.text;
+                    el.value = opt.value; 
+                    el.text = opt.text;
                     subSelect.appendChild(el);
                 });
-            } else { subContainer.classList.add('hidden'); }
+            } else { 
+                subContainer.classList.add('hidden'); 
+            }
+        }
+
+        // 2. Function to handle the "Find Home" button click
+        function handleSearch() {
+            const cityValue = document.getElementById('sub-location-select').value;
+            
+            if (cityValue === 'san-pedro') {
+                // Redirects to Southwind when San Pedro is selected and button is clicked
+                window.open('https://github.com/parkres/Southwind', '_blank');
+            } else if (cityValue === '') {
+                alert('Please select a city first.');
+            } else {
+                // You can add more links for Calamba, Tanza, etc. here later
+                alert('Search results for ' + cityValue + ' coming soon!');
+            }
         }
     </script>
-</body>
-</html>

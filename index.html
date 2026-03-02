@@ -14,12 +14,7 @@
         .text-filinvest-green { color: var(--filinvest-green); }
         .bg-filinvest-green { background-color: var(--filinvest-green); }
         .text-filinvest-gold { color: var(--filinvest-gold); }
-        .border-filinvest-gold { border-color: var(--filinvest-gold); }
-        
-        .fb-float:hover {
-            transform: scale(1.1);
-            background-color: #365899;
-        }
+        .fb-float:hover { transform: scale(1.1); background-color: #365899; }
     </style>
 </head>
 <body class="bg-[#fdfbf7] text-[#333] font-sans">
@@ -42,60 +37,70 @@
 
     <section class="relative min-h-[650px] flex items-center justify-center overflow-hidden py-20">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80" 
+            <img src="https://lh3.googleusercontent.com/u/0/d/1hAyYQAhAuWwlTeDhTA2vumqp6G-xpkrl=w1920-h1080-iv1" 
                  class="w-full h-full object-cover" 
                  alt="Filinvest South Background">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10 text-center text-white">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg leading-tight">Your Dream Home Awaits in the South</h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-md text-gray-100 text-shadow">Find premium properties in Batangas, Laguna, and Cavite.</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg leading-tight">Build Your Future in the South</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-md text-gray-100">Premium properties in Batangas, Laguna, and Cavite managed by Park Real Estate Services.</p>
 
             <div class="bg-white p-4 rounded-lg shadow-2xl flex flex-col md:flex-row gap-4 max-w-6xl mx-auto border-b-4 border-filinvest-gold">
-                
                 <div class="flex-1 text-left px-2">
-                    <label class="block text-filinvest-green text-xs font-bold uppercase mb-2 italic">Select Province</label>
-                    <select id="location-select" onchange="updateSubLocation()" class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent cursor-pointer font-semibold">
+                    <label class="block text-filinvest-green text-xs font-bold uppercase mb-2">Select Province</label>
+                    <select id="location-select" onchange="updateSubLocation()" class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent font-semibold cursor-pointer">
                         <option value="">Select Location</option>
                         <option value="batangas">Batangas</option>
                         <option value="laguna">Laguna</option>
                         <option value="cavite">Cavite</option>
                     </select>
                 </div>
-
                 <div id="sub-location-container" class="hidden flex-1 text-left px-2 border-l border-gray-100">
-                    <label id="sub-location-label" class="block text-filinvest-green text-xs font-bold uppercase mb-2 italic">Select City/Town</label>
-                    <select id="sub-location-select" class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent cursor-pointer font-semibold">
-                        </select>
+                    <label id="sub-location-label" class="block text-filinvest-green text-xs font-bold uppercase mb-2">Select City/Town</label>
+                    <select id="sub-location-select" class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent font-semibold cursor-pointer"></select>
                 </div>
-
                 <div class="flex-1 text-left px-2 border-l border-gray-100">
-                    <label class="block text-filinvest-green text-xs font-bold uppercase mb-2 italic">Property Type</label>
-                    <select class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent cursor-pointer font-semibold">
+                    <label class="block text-filinvest-green text-xs font-bold uppercase mb-2">Property Type</label>
+                    <select class="w-full text-gray-700 p-2 border-b border-gray-200 focus:outline-none focus:border-filinvest-gold bg-transparent font-semibold cursor-pointer">
                         <option value="">Select Type</option>
                         <option value="house-lot">House and Lot</option>
                         <option value="lot-only">Lot Only</option>
                     </select>
                 </div>
-
                 <div class="flex items-end">
-                    <button class="w-full bg-filinvest-green text-white font-bold py-4 px-10 rounded hover:bg-opacity-90 transition uppercase tracking-widest text-sm shadow-lg">
-                        Find Home
-                    </button>
+                    <button class="w-full bg-filinvest-green text-white font-bold py-4 px-10 rounded hover:bg-opacity-90 transition uppercase tracking-widest text-sm shadow-lg">Find Home</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#1a1a1a] text-white py-12 border-t-4 border-[#b38e5d]">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold tracking-widest uppercase mb-2">FILINVEST <span class="text-[#b38e5d]">LAND</span></h2>
-            <p class="text-gray-400 text-sm mb-4 tracking-wide italic">This website is managed by <span class="text-white font-medium">Park Real Estate Services</span></p>
-            <div class="mb-8 text-xl font-bold text-[#b38e5d]">+63 921 254 4429</div>
-            <div class="flex justify-center space-x-6 text-gray-400 border-t border-gray-800 pt-8">
-                <a href="https://www.facebook.com/profile.php?id=61556346275854" target="_blank" class="hover:text-[#b38e5d] transition"><i class="fa-brands fa-facebook-f text-2xl"></i></a>
-                <a href="https://wa.me/639212544429" class="hover:text-[#b38e5d] transition"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+    <footer class="bg-gray-50 text-gray-700 py-16 border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center text-center">
+                <p class="text-sm uppercase tracking-[0.2em] text-gray-400 font-bold mb-2">Managed By</p>
+                <h3 class="text-2xl font-light text-filinvest-green mb-8">Park Real Estate Services</h3>
+                
+                <div class="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <a href="tel:+639212544429" class="flex items-center gap-3 text-xl font-semibold hover:text-filinvest-gold transition">
+                        <i class="fa-solid fa-phone text-filinvest-gold"></i> +63 921 254 4429
+                    </a>
+                    <span class="hidden md:block text-gray-300">|</span>
+                    <a href="https://www.facebook.com/profile.php?id=61556346275854" target="_blank" class="flex items-center gap-3 text-xl font-semibold hover:text-[#1877F2] transition">
+                        <i class="fa-brands fa-facebook text-[#1877F2]"></i> Facebook Page
+                    </a>
+                </div>
+
+                <div class="w-24 h-px bg-filinvest-gold mb-10"></div>
+
+                <div class="flex flex-col md:flex-row justify-between w-full items-center gap-4 text-xs text-gray-400 uppercase tracking-widest">
+                    <p>© 2026 Park Real Estate Services. All Rights Reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="https://wa.me/639212544429" class="hover:text-green-600 transition"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+                        <a href="viber://chat?number=639212544429" class="hover:text-purple-600 transition"><i class="fa-brands fa-viber text-lg"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -106,48 +111,29 @@
             const subContainer = document.getElementById('sub-location-container');
             const subSelect = document.getElementById('sub-location-select');
             const subLabel = document.getElementById('sub-location-label');
-
-            // Reset sub-menu
             subSelect.innerHTML = '';
-            
             let options = [];
 
             if (mainLocation === 'laguna') {
                 subLabel.innerText = "City in Laguna";
-                options = [
-                    { value: 'calamba', text: 'Calamba' },
-                    { value: 'san-pedro', text: 'San Pedro' }
-                ];
+                options = [{ value: 'calamba', text: 'Calamba' }, { value: 'san-pedro', text: 'San Pedro' }];
             } else if (mainLocation === 'cavite') {
                 subLabel.innerText = "City in Cavite";
-                options = [
-                    { value: 'tanza', text: 'Tanza' },
-                    { value: 'trece-martires', text: 'Trece Martires' }
-                ];
+                options = [{ value: 'tanza', text: 'Tanza' }, { value: 'trece-martires', text: 'Trece Martires' }];
             }
 
             if (options.length > 0) {
-                // Show the container and add options
                 subContainer.classList.remove('hidden');
-                
-                // Add default "Choose" option
                 let defaultOpt = document.createElement('option');
-                defaultOpt.value = "";
-                defaultOpt.text = "Choose City/Town";
+                defaultOpt.value = ""; defaultOpt.text = "Choose City/Town";
                 subSelect.appendChild(defaultOpt);
-
                 options.forEach(opt => {
                     let el = document.createElement('option');
-                    el.value = opt.value;
-                    el.text = opt.text;
+                    el.value = opt.value; el.text = opt.text;
                     subSelect.appendChild(el);
                 });
-            } else {
-                // Hide if no sub-locations (like for Batangas)
-                subContainer.classList.add('hidden');
-            }
+            } else { subContainer.classList.add('hidden'); }
         }
     </script>
-
 </body>
 </html>
